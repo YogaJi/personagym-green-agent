@@ -403,6 +403,8 @@ class Agent:
             parts=[
                 Part(root=TextPart(text=f"Final PersonaScore: {final_score:.2f}/10")),
                 Part(root=DataPart(data={
+                    #receive config from leaderboard
+                    "config_meta": req.config,
                     "persona": persona,
                     "environment": env,
                     "final_score": round(final_score, 2),
